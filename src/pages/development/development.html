@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Development Tasks</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+   <ion-item>
+    <ion-label>Interviewee:</ion-label>
+     <!--<ion-select [(ngModel)]="varItem.person" multiple>-->
+     <ion-select [(ngModel)]="varItem.person">
+      <ion-option *ngFor="let Interviewee of interviewees" [value] = "Interviewee.IntervieweeID">{{Interviewee.Name}}</ion-option>
+    </ion-select>
+   </ion-item>
+  
+  <ion-item>
+    <ion-label>Todo:</ion-label>
+    <ion-input type="text" [(ngModel)]="varItem.title" name="title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Description:</ion-label>
+    <ion-textarea [(ngModel)]="varItem.description" name="description"></ion-textarea>
+  </ion-item>
+  <button ion-button type="submit" block (click)="processResults()">Process Results</button>
+
+  <br>
+
+<ion-item>
+    <ion-label>Enter New Interviewee:</ion-label>
+    <ion-input type="text" [(ngModel)]="varItemInterviewee.Name" name="Interviewee"></ion-input>
+  </ion-item>
+<button ion-button type="submit" block (click)="addNewInterviewee()">Add New Inteviewee</button>
+
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar color ="primary">
+        <button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Elite Schedule Version 2 - May 11,2016</ion-title>
+    </ion-navbar>
+    <ion-toolbar color="secondary">
+      <ion-title>My Teams</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <p>You are not currently following any teams..</p>
+    <p>Frst Select a torunament, then you can follow teams from their team page.</p>
+    <button ion-button (click)="goToTournaments()">Find a Torunament</button>
+    <button ion-button (click)="goToToDevPage()">Open Development Page</button>
+</ion-content>
